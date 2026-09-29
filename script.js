@@ -1,6 +1,6 @@
 // --- CONFIGURATION ---
 // Paste just your MEGA File ID here (the characters between /file/ or /embed/ and #)
-const FILE_ID = "Zmg1SZZZ";
+const FILE_ID = "xmQViLzZ";
 
 // --- UI ELEMENTS ---
 const lockScreen = document.getElementById("lock-screen");
