@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #0f0f10;
+  color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+header {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+/* Layout */
+.stream-layout {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 850px) {
+  .stream-layout {
+    grid-template-columns: 2.2fr 1fr;
+  }
+}
+
+/* Responsive 16:9 Video Player */
+.player-card {
+  background: #191a1d;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #282a2e;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-info {
+  padding: 1rem 1.25rem;
+}
+
+.video-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.video-info p {
+  color: #9da3af;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Playlist Sidebar */
+.playlist-card {
+  background: #191a1d;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #282a2e;
+  height: fit-content;
+}
+
+.playlist-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #e2e8f0;
+}
+
+.playlist-item {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #232529;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.playlist-item:hover {
+  background: #2d3036;
+}
+
+.playlist-item.active {
+  border: 1px solid #3b82f6;
+  background: #1e293b;
+}
+
+.playlist-item span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Security Overlay */
+#lock-screen {
+  position: fixed;
+  inset: 0;
+  background: #09090b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-box {
+  background: #18181b;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #27272a;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.login-box h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-box p {
+  color: #a1a1aa;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #3f3f46;
+  background: #27272a;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: #3b82f6;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #1d4ed8;
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  display: none;
+}
